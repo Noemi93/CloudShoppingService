@@ -8,5 +8,7 @@ logging:
 
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serverUrl:
     defaultZone : http://localhost:8099/eureka/
