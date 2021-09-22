@@ -1,13 +1,0 @@
-#Applitacion Configuration
-server:
-  port: 8093
-
-spring:
-  cloud:
-    loadbalancer:
-       ribbon:
-        enable: false
-
-logging:
-  pattern:    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
-
