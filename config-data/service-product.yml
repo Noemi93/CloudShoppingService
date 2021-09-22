@@ -1,7 +1,7 @@
 #Applitacion Configuration
-#server:
-  #port: 8091
+server:
+  port: 8091
 
-#logging:
-  #pattern:    #console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+logging:
+  pattern:    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
