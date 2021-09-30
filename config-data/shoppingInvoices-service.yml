@@ -1,0 +1,35 @@
+#Applitacion Configuration
+server:
+  port: 8093
+
+spring:
+  cloud:
+    loadbalancer:
+       ribbon:
+        enable: false
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+feign:
+    hystrix:
+        enabled: true
+hystrix:
+    metrics:
+        enabled: true
+management:
+    endpoints:
+        web:
+            exposure:
+                    include=: *
+hystrix:
+  dashboard:
+    proxyStreamAllowList: "*"
