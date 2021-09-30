@@ -19,15 +19,17 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
-Feign:
-  hystrix:
-    enabled: true
+feign:
+    hystrix:
+        enabled: true
+hystrix:
+    metrics:
+        enabled: true
 management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-      base-path: /
+    endpoints:
+        web:
+            exposure:
+                    include=: *
 hystrix:
   dashboard:
     proxyStreamAllowList: "*"
