@@ -26,6 +26,8 @@ feign:
         enabled: true
     dashboard:
       proxyStreamAllowList: "*"
+    circuitbreaker:
+      enabled: true
     
 management:
     endpoints:
