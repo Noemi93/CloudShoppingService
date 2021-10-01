@@ -3,7 +3,7 @@ server:
   port: 8093
 
 spring:
-  cloud:
+   cloud:
     loadbalancer:
        ribbon:
         enable: false
@@ -22,14 +22,13 @@ logging:
 feign:
     hystrix:
         enabled: true
-hystrix:
     metrics:
         enabled: true
+    dashboard:
+    proxyStreamAllowList: "*"
+    
 management:
     endpoints:
         web:
             exposure:
-                    include=: *
-hystrix:
-  dashboard:
-    proxyStreamAllowList: "*"
+                    include: "*"
