@@ -25,7 +25,7 @@ feign:
     metrics:
         enabled: true
     dashboard:
-    proxyStreamAllowList: "*"
+      proxyStreamAllowList: "*"
     
 management:
     endpoints:
