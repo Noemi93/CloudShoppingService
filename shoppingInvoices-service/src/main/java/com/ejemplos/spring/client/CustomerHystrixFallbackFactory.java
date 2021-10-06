@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 import com.ejemplos.spring.model.Customer;
 
 @Component
-public class CustomerHystrixFallbackFactory implements CustomerClient {
-
+public class CustomerHystrixFallbackFactory implements CustomerClient  {
+	
 	@Override
 	public ResponseEntity<Customer> getCustomer(Integer id) {
 		Customer customer = Customer.builder()
