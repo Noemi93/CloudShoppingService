@@ -9,14 +9,15 @@ import com.ejemplos.spring.entity.Customer;
 import com.ejemplos.spring.entity.Region;
 import com.ejemplos.spring.repository.CustomerRepository;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
+@RequiredArgsConstructor
 @Slf4j
 public class CustomerServiceImpl implements CustomerService{
 	
-	@Autowired
-	private CustomerRepository customerRepository;
+	private final CustomerRepository customerRepository;
 	
 	@Override
 	public List<Customer> findCustomerAll() {
