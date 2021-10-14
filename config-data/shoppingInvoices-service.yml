@@ -2,11 +2,11 @@
 server:
   port: 8093
 
-spring:
-   cloud:
-    loadbalancer:
-       ribbon:
-        enable: false
+#spring:
+   #cloud:
+    #loadbalancer:
+       #ribbon:
+        #enable: true
 
 eureka:
   client:
@@ -19,18 +19,33 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
-feign:
-    hystrix:
-        enabled: true
-    metrics:
-        enabled: true
-    dashboard:
-      proxyStreamAllowList: "*"
-    circuitbreaker:
-      enabled: true
+#feign:
+    #hystrix:
+        #enabled: true
+    #metrics:
+        #enabled: true
+    #dashboard:
+      #proxyStreamAllowList: "*"
+    #circuitbreaker:
+      #enabled: true
     
 management:
     endpoints:
         web:
             exposure:
                     include: "*"
+
+ribbon:
+  eureka:
+    enabled: true
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ReadTimeout: 2000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
