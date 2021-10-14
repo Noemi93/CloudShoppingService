@@ -14,7 +14,7 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
 management:
-    endpoints:
-        web:
-            exposure:
-                    include: "*"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
