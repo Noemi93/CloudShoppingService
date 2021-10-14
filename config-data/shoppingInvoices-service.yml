@@ -2,11 +2,11 @@
 server:
   port: 8093
 
-#spring:
-   #cloud:
-    #loadbalancer:
-       #ribbon:
-        #enable: true
+spring:
+   cloud:
+    loadbalancer:
+       ribbon:
+        enable: true
 
 eureka:
   client:
@@ -34,18 +34,3 @@ management:
         web:
             exposure:
                     include: "*"
-
-ribbon:
-  eureka:
-    enabled: true
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 0
-  ReadTimeout: 2000
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000
